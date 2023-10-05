@@ -1,39 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from "./Home"
-import Learn from './Learn';
-import Scratch from "./Scratch"
-import Sreach from "./Sreach"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css'; 
+
 import Navbar from "./Navbar"
+import Home from "./Home";
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Learn from "./Learn";
+import Dashboard from "./Dashboard";
+
+import Scratch from "./Scratch";
+import Sreach from "./Sreach"
+
 function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
+    return (
 
-        <Routes>
-          <Route path="/" element={<Navbar />}>
-            <Navbar />
-          </Route>
-          <Route index element={<Home />}>
-            <Home />
-          </Route>
-          <Route path='learn'>
-            <Learn />
-          </Route>
-          <Route path="scratch">
-            <Scratch />
-          </Route>
-          <Route path='sreach'>
-            <Sreach />
-          </Route>
-        </Routes>
+        <div className="App">
 
-      </BrowserRouter>
-    </div>
+            <BrowserRouter>
 
-  );
+                <Routes>
+
+                    <Route path="/" element={<Navbar />}>
+
+                        <Route path="home" element={<Home />} />
+
+                        <Route path="learn" element={<Learn />} />
+
+                        <Route path="dashboard" element={<Dashboard/>}/>
+
+                        <Route path="scratch" element={<Scratch/>}/>
+
+                        <Route path="sreach" element={<Sreach/>}/>
+                        
+                    </Route>
+
+                </Routes>
+
+            </BrowserRouter>
+
+        </div>
+    )
 }
-
-export default App;
+export default App
