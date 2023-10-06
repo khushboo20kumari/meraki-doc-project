@@ -12,6 +12,7 @@ import Sreach from "./Sreach"
 import About from "./About";
 import GetInvolved from "./GetInvolved";
 import OurStory from "./OurStory";
+import MerakiTeam from "./MerakiTeam";
 function App() {
     return (
 
@@ -36,6 +37,8 @@ function App() {
                         <Route path="sreach" element={<Sreach/>}/>
 
                         <Route path="ourstory" element={<OurStory/>}/>
+                        
+                        <Route path="merakiteam" element={<MerakiTeam/>}></Route>
                         
                     </Route>
 

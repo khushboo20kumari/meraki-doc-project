@@ -28,9 +28,6 @@ const Navbar = () => {
                 <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/language_7ca6001f6b.svg"></img><Typography>Spoken English</Typography></MenuItem>
                 <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/residential_22d04ce534.svg"></img><Typography>Introduction to Scratch</Typography></MenuItem>
                 <MenuItem value={4}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/scratch_093b5e17bb.svg"></img><Typography>MCDigital Course-1</Typography></MenuItem>
-
-                {/* <MenuItem value={5}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/MC_Digital_Course_1_8d43b205d3.png"><Typography>Miscellaneous Courses</Typography></img></MenuItem> */}
-                {/* <MenuItem value={6}><img src="https://www.merakilearn.org/static/media/misc.5b7c358b.svg"><Typography>Typing</Typography></img></MenuItem> */}
               </Select>
 
 
@@ -39,7 +36,8 @@ const Navbar = () => {
               <Select value="" displayEmpty>
                 <MenuItem value="">About</MenuItem>
                 <MenuItem value={1}><Link to="/ourstory">Our Story</Link></MenuItem>
-                <MenuItem value={2}>Meraki Teams</MenuItem>
+                
+                <MenuItem value={2}><Link to="/merakiteam">Meraki Team</Link></MenuItem>
 
               </Select>
             
