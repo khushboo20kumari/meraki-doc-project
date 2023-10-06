@@ -1,19 +1,20 @@
-import { AppBar, Toolbar, Button,Stack, Select, MenuItem,TextField, Typography} from "@mui/material";
-import { Outlet, Link} from "react-router-dom";
+import { AppBar, Toolbar, Button, Stack, Select, MenuItem, TextField, Typography } from "@mui/material";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       <AppBar position="static">
         <Toolbar>
-          <Link to="/home"  >
-            <img  
-              src="https://www.merakilearn.org/static/media/meraki.dd9c8e09.svg"
-               />
-          </Link>
-          <Stack direction="row">
-          <Link to="/learn" >
-            <Button spacing={4} >
+          <Stack direction="row" spacing={3}>
+            <Link to="/home"  >
+              <img
+                src="https://www.merakilearn.org/static/media/meraki.dd9c8e09.svg"
+              />
+            </Link>
+
+            
+
 
               <Select value="" displayEmpty>
                 <MenuItem value="" >learn</MenuItem>
@@ -32,29 +33,53 @@ const Navbar = () => {
                 {/* <MenuItem value={6}><img src="https://www.merakilearn.org/static/media/misc.5b7c358b.svg"><Typography>Typing</Typography></img></MenuItem> */}
               </Select>
 
-            </Button>
-          </Link>
 
-          {/* <Link to="/dashboard">
-            <Button variant="contained" color="success">
-              Dashboard
-            </Button>
-          </Link> */}
+            
+          
+              <Select value="" displayEmpty>
+                <MenuItem value="">About</MenuItem>
+                <MenuItem value={1}><Link to="/ourstory">Our Story</Link></MenuItem>
+                <MenuItem value={2}>Meraki Teams</MenuItem>
 
-          {/* <Link to="/scratch">
+              </Select>
+            
+
+           
+              <Select value="" displayEmpty>
+                <MenuItem value="">Get Involved</MenuItem>
+                <MenuItem value={1}>Volunteen With Us</MenuItem>
+                <MenuItem value={2}>Our Partneer</MenuItem>
+                <MenuItem value={2}>Careers</MenuItem>
+
+              </Select>
+          
+            <Link to="/dashboard">
+
+              <Button variant="contained" color="success" sx={{ marginTop: '15px' }} >
+
+                Dashboard
+
+              </Button>
+
+            </Link>
+
+            {/* <Link to="/scratch">
             <Button variant="contained" color="success">
               Scratch
             </Button>
           </Link> */}
-          </Stack>
-          {/* <Link to="/search">
+
+            {/* <Link to="/search">
             <Button>
 
             <TextField id="standard-basic" label="Standard" variant="standard"/>
 
             </Button>
           </Link> */}
+          </Stack>
+
         </Toolbar>
+
       </AppBar>
 
       <Outlet />
