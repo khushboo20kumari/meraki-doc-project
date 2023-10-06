@@ -1,8 +1,13 @@
+import { Card } from "@mui/material";
+
 const Home = () => {
-    return <h1>Blog Articles
-      jdhfds jsf sk fskjf 
-      sfns kdjs ksjf ssf s
-    </h1>;
+    return (
+      <>
+       <Card variant="outlined">
+        i am kskjf kjdshfs jds hfsdkjfds fjd fdjkfs fjdf sjdf sdf djkfh fjdsfhd eiur erue
+       </Card> 
+      </>
+    )
   };
   
   export default Home;

@@ -1,35 +1,52 @@
-import { AppBar, Toolbar, Button, Typography,TextField } from "@mui/material";
-import { Outlet, Link } from "react-router-dom";
+import { AppBar, Toolbar, Button,Stack, Select, MenuItem,TextField, Typography} from "@mui/material";
+import { Outlet, Link} from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       <AppBar position="static">
         <Toolbar>
-          <Link to="/home" >
-            <img 
+          <Link to="/home"  >
+            <img  
               src="https://www.merakilearn.org/static/media/meraki.dd9c8e09.svg"
                />
           </Link>
-
+          <Stack direction="row">
           <Link to="/learn" >
-            <Button>
-              <Typography variant="h6" color="secondary"style={{flexGrow:1}} > Learn </Typography>
+            <Button spacing={4} >
+
+              <Select value="" displayEmpty>
+                <MenuItem value="" >learn</MenuItem>
+                <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography>Introduction to Python</Typography></MenuItem>
+                <MenuItem value={2}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/typing_c44af896be.svg"></img><Typography>Residential Programmes</Typography></MenuItem>
+                <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/language_7ca6001f6b.svg"></img><Typography>Spoken English</Typography></MenuItem>
+                <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/residential_22d04ce534.svg"></img><Typography>Introduction to Scratch</Typography></MenuItem>
+                <MenuItem value={4}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/scratch_093b5e17bb.svg"></img><Typography>MCDigital Course-1</Typography></MenuItem>
+                <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography>Introduction to Python</Typography></MenuItem>
+                <MenuItem value={2}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/typing_c44af896be.svg"></img><Typography>Residential Programmes</Typography></MenuItem>
+                <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/language_7ca6001f6b.svg"></img><Typography>Spoken English</Typography></MenuItem>
+                <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/residential_22d04ce534.svg"></img><Typography>Introduction to Scratch</Typography></MenuItem>
+                <MenuItem value={4}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/scratch_093b5e17bb.svg"></img><Typography>MCDigital Course-1</Typography></MenuItem>
+
+                {/* <MenuItem value={5}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/MC_Digital_Course_1_8d43b205d3.png"><Typography>Miscellaneous Courses</Typography></img></MenuItem> */}
+                {/* <MenuItem value={6}><img src="https://www.merakilearn.org/static/media/misc.5b7c358b.svg"><Typography>Typing</Typography></img></MenuItem> */}
+              </Select>
+
             </Button>
           </Link>
 
-          <Link to="/dashboard">
-            <Button>
-              <Typography variant="h6" color="secondary"> Dashboard </Typography>
+          {/* <Link to="/dashboard">
+            <Button variant="contained" color="success">
+              Dashboard
             </Button>
-          </Link>
+          </Link> */}
 
-          <Link to="/scratch">
-            <Button>
-              <Typography variant="h6" color="secondary" >scratch</Typography>
+          {/* <Link to="/scratch">
+            <Button variant="contained" color="success">
+              Scratch
             </Button>
-          </Link>
-
+          </Link> */}
+          </Stack>
           {/* <Link to="/search">
             <Button>
 
