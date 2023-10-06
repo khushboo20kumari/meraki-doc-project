@@ -17,6 +17,7 @@ const Navbar = () => {
 
 
               <Select value="" displayEmpty>
+                
                 <MenuItem value="" >learn</MenuItem>
                 <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography>Introduction to Python</Typography></MenuItem>
                 <MenuItem value={2}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/typing_c44af896be.svg"></img><Typography>Residential Programmes</Typography></MenuItem>
@@ -36,7 +37,7 @@ const Navbar = () => {
               <Select value="" displayEmpty>
                 <MenuItem value="">About</MenuItem>
                 <MenuItem value={1}><Link to="/ourstory">Our Story</Link></MenuItem>
-                
+
                 <MenuItem value={2}><Link to="/merakiteam">Meraki Team</Link></MenuItem>
 
               </Select>
