@@ -40,6 +40,7 @@ function App() {
                         <Route path="ourstory" element={<OurStory/>}/>
                         
                         <Route path="merakiteam" element={<MerakiTeam/>}></Route>
+                        
                         <Route path="python" element={<Python/>}></Route>
                         
                     </Route>
