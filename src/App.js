@@ -14,6 +14,7 @@ import GetInvolved from "./GetInvolved";
 import OurStory from "./OurStory";
 import MerakiTeam from "./MerakiTeam";
 import Python from "./Python";
+import OurPartners from "./OurPartners"
 function App() {
     return (
 
@@ -42,6 +43,8 @@ function App() {
                         <Route path="merakiteam" element={<MerakiTeam/>}></Route>
                         
                         <Route path="python" element={<Python/>}></Route>
+
+                        <Route path="ourPartners" element={<OurPartners/>}/>
                         
                     </Route>
 
