@@ -1,17 +1,70 @@
-import { type } from "@testing-library/user-event/dist/type";
+import { Button, TextField, Typography } from "@mui/material";
+import axios from "axios";
+// import { type } from "@testing-library/user-event/dist/type";
+import { useState } from "react";
+import { useRef } from "react";
 
-function PostMethod(){
-    fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=89eef3426d167c3c8145a257ebe68357&",{
-       method:"POST",
+function PostMethod() {
 
-       headers:{
-        Accept:"application\json",
-        Content:"applicaton\json",
-       }
+    const [title, setTitle] = useState('')
 
-    })
-    return(
+    const [originalTitle, setOriginalTitle] = useState('')
+
+    const [des, setDes] = useState("")
+
+    const ele = useRef('')
+
+    const [data1, setData1] = useState([])
+
+    const HandlerTitle = (e) => {
+        setTitle(e.target.value)
+    }
+    const HanlderDes = (e) => {
+        setOriginalTitle(e.target.value)
+    }
+
+    const HandlerPopularity = (e) => {
+        setDes(e.target.value)
+    }
+
+    const HandlerSave = () => {
+
+        setTitle('')
+        setOriginalTitle('')
+        setDes('')
+        ele.current.focus()
+        setData1({...data1, title, originalTitle, des})
+
+        axios.post("https://jsonplaceholder.typicode.com/todos",data1)
+        .then(res=>{
+            console.log(res,"data")
+        })
+        axios.put("https://jsonplaceholder.typicode.com/todos",data1)
+        .then(res=>{
+            console.log(res,"data")
+        })
+        
+
+
+    }
+    
+    return (
         <>
+
+
+            <Typography>Post Method</Typography><br />
+
+            <TextField variant="standard" onChange={HandlerTitle} value={title} ref={ele}></TextField><br />
+
+            <TextField variant="standard" onChange={HanlderDes} value={originalTitle} ref={ele}></TextField><br />
+
+            <TextField variant="standard" onChange={HandlerPopularity} value={des} ref={ele}></TextField><br />
+
+            <Button variant="contained" onClick={HandlerSave}>Save</Button><br />
+
+
+            {/* <Typography>{}</Typography> */}
+
 
         </>
     )

@@ -51,6 +51,8 @@ const Navbar = () => {
                 <MenuItem value={1}>Volunteen With Us</MenuItem>
                 <MenuItem value={2}><Link to="/ourPartners">Our Partneer</Link></MenuItem>
                 <MenuItem value={2}>Careers</MenuItem>
+                <MenuItem value={2}><Link to="/postmethod">Post Method</Link></MenuItem>
+
 
               </Select>
           

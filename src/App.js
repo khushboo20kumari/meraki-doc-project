@@ -15,6 +15,7 @@ import OurStory from "./OurStory";
 import MerakiTeam from "./MerakiTeam";
 import Python from "./Python";
 import OurPartners from "./OurPartners"
+import PostMethod from "./PostMethod";
 function App() {
     return (
 
@@ -45,6 +46,8 @@ function App() {
                         <Route path="python" element={<Python/>}></Route>
 
                         <Route path="ourPartners" element={<OurPartners/>}/>
+                        
+                        <Route path="postmethod" element={<PostMethod/>}></Route>
                         
                     </Route>
 
