@@ -13,6 +13,7 @@ import About from "./About";
 import GetInvolved from "./GetInvolved";
 import OurStory from "./OurStory";
 import MerakiTeam from "./MerakiTeam";
+import Python from "./Python";
 function App() {
     return (
 
@@ -39,6 +40,7 @@ function App() {
                         <Route path="ourstory" element={<OurStory/>}/>
                         
                         <Route path="merakiteam" element={<MerakiTeam/>}></Route>
+                        <Route path="python" element={<Python/>}></Route>
                         
                     </Route>
 

@@ -1,36 +1,37 @@
-// import { response } from "express";
-import { Typography } from "@mui/material";
+import axios from "axios";
 import { useEffect, useState } from "react";
-// import { useEffect } from "react";
 
-function MerakiTeamApi() {
+function MerakiTeam() {
 
-  const [merakiTeamDataAPi, setMerakiTeamDataApi] = useState([])
+  const [data, setData] = useState([])
 
   const fetchData = () => {
-    fetch("https://navgurukul.github.io/tarabai-shinde/data/meraki_team.json")
+    fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=89eef3426d167c3c8145a257ebe68357&')
 
-      .then(response => response.json())
-
-      .then(merakiTeamData => {
-        setMerakiTeamDataApi(merakiTeamData)
+     .then(response => response.json())
+     
+     .then(movieData => {
+         setData(movieData.results.slice(0, 10))
+         console.log(movieData,"data");
       })
-  }
+     
+      .catch(error => {
+         console.error('Error fetching data:', error)
+       });
+   };
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+   useEffect(() => {
+      fetchData();
+   }, []);
 
 
-  console.log(merakiTeamDataAPi, "data")
+   console.log(data,"data")
   return (
     <>
-      {/* {merakiTeamDataAPi.map((item) => {
-        return <p key={item.id}>{item.name}</p>;
-      })} */}
-
 
     </>
   )
 }
-export default MerakiTeamApi;
+export default MerakiTeam;
+
+

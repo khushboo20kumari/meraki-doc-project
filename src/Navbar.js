@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Button, Stack, Select, MenuItem, TextField, Typography } from "@mui/material";
+import { AppBar, Toolbar, Button, Stack, Select, MenuItem,Typography} from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -6,7 +6,9 @@ const Navbar = () => {
     <>
       <AppBar position="static">
         <Toolbar>
+          
           <Stack direction="row" spacing={3}>
+
             <Link to="/home"  >
               <img
                 src="https://www.merakilearn.org/static/media/meraki.dd9c8e09.svg"
@@ -19,7 +21,7 @@ const Navbar = () => {
               <Select value="" displayEmpty>
                 
                 <MenuItem value="" >learn</MenuItem>
-                <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography>Introduction to Python</Typography></MenuItem>
+                <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography><Link to="/python">Introduction to Python</Link></Typography></MenuItem>
                 <MenuItem value={2}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/typing_c44af896be.svg"></img><Typography>Residential Programmes</Typography></MenuItem>
                 <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/language_7ca6001f6b.svg"></img><Typography>Spoken English</Typography></MenuItem>
                 <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/residential_22d04ce534.svg"></img><Typography>Introduction to Scratch</Typography></MenuItem>
