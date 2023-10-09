@@ -15,7 +15,7 @@ export default function Python() {
             .then(movieData => {
 
                 setRandomData(movieData)
-                setStoreData([...storeData, randomData.content])
+                setStoreData([...storeData, randomData.content,randomData.authorSlug])
 
             })
 
@@ -23,13 +23,21 @@ export default function Python() {
                 console.error('Error fetching data:', error)
             });
     };
+
+    const HanldeDelete = (index) => {
+
+        const list = [...storeData];
+        list.splice(index, 1);
+        setStoreData(list);
+
+    }
     console.log(storeData, "rondom")
 
     return (
         <>
 
 
-            <Box container spacing={2} align="center" style={{marginTop:"80px"}}> 
+            <Box container spacing={2} align="center" style={{ marginTop: "80px" }}>
 
                 <Stack spacing={1} sx={{ width: '40%' }}>
 
@@ -37,11 +45,9 @@ export default function Python() {
 
                     <Typography variant="h6">{randomData.content}</Typography>
 
-                    <Button onClick={fetchData} variant="contained">Button</Button>
-
-
-
                 </Stack>
+                <Button onClick={fetchData} variant="contained">Quote</Button>
+
 
             </Box>
 
@@ -49,16 +55,17 @@ export default function Python() {
             <Box container spacing={2} align="center">
 
                 <Stack spacing={1} sx={{ width: '60%' }}>
-                    <Card style={{marginTop:"80px"}}>
+                    <Card style={{ marginTop: "80px" }}>
 
-                    <Typography variant="h4" style={{marginTop:"20px"}}>List of Random Quote </Typography>
+                        <Typography variant="h4" style={{ marginTop: "20px" }}>List of Random Quote </Typography>
 
-                    {storeData.map((item) => (
-                        <> 
-                           <Typography variant="h6">{item}</Typography>
-                           <Button variant="contained">Delete</Button>
-                        </>
-                    ))}
+                        {storeData.map((item) => (
+                            <>
+                                <Typography variant="h6">{item}</Typography>
+
+                                <Button variant="contained" style={{ marginLeft: "800px" }} onClick={HanldeDelete}>Delete</Button>
+                            </>
+                        ))}
 
 
                     </Card>
