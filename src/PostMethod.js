@@ -1,6 +1,6 @@
 import { Button, TextField, Typography } from "@mui/material";
 import axios from "axios";
-// import { type } from "@testing-library/user-event/dist/type";
+
 import { useState } from "react";
 import { useRef } from "react";
 
@@ -33,21 +33,24 @@ function PostMethod() {
         setOriginalTitle('')
         setDes('')
         ele.current.focus()
-        setData1({...data1, title, originalTitle, des})
+        setData1({ ...data1, title, originalTitle, des })
 
-        axios.post("https://jsonplaceholder.typicode.com/todos",data1)
-        .then(res=>{
-            console.log(res,"data")
-        })
-        axios.put("https://jsonplaceholder.typicode.com/todos",data1)
-        .then(res=>{
-            console.log(res,"data")
-        })
-        
 
+        axios.post("https://jsonplaceholder.typicode.com/todos", data1)
+            .then(res => {
+                console.log(res, "data")
+            })
 
     }
-    
+
+    // const HandlerUpdate = () => {
+    //     axios.put("https://jsonplaceholder.typicode.com/todos", data1)
+    //         .then(res => {
+    //             console.log(res, "data")
+    //         })
+    // }
+
+
     return (
         <>
 
@@ -62,10 +65,8 @@ function PostMethod() {
 
             <Button variant="contained" onClick={HandlerSave}>Save</Button><br />
 
-
-            {/* <Typography>{}</Typography> */}
-
-
+            {/* <Button variant="contained" onClick={HandlerUpdate}>UPdate</Button><br /> */}
+    
         </>
     )
 }
