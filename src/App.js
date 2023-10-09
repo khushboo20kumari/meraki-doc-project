@@ -10,12 +10,17 @@ import Dashboard from "./Dashboard";
 import Scratch from "./Scratch";
 import Sreach from "./Sreach"
 import About from "./About";
-// import GetInvolved from "./GetInvolved";
+
 import OurStory from "./OurStory";
 import MerakiTeam from "./MerakiTeam";
 import Python from "./Python";
+
 import OurPartners from "./OurPartners"
 import PostMethod from "./PostMethod";
+
+// import Main from "./PhoneBook/Main";
+import PhoneBook from "./PhoneBook"
+
 function App() {
     return (
 
@@ -48,13 +53,18 @@ function App() {
                         <Route path="ourPartners" element={<OurPartners/>}/>
                         
                         <Route path="postmethod" element={<PostMethod/>}></Route>
+
+                        <Route path="phonebook" element={<PhoneBook/>}></Route>
+
+
+                        
                         
                     </Route>
 
                 </Routes>
 
             </BrowserRouter>
-               {/* <GetInvolved/> */}
+               
         </div>
     )
 }
