@@ -29,13 +29,13 @@ export default function Python() {
         <>
 
 
-            <Box container spacing={2} align="center">
+            <Box container spacing={2} align="center" style={{marginTop:"80px"}}> 
 
                 <Stack spacing={1} sx={{ width: '40%' }}>
 
-                    <Typography variant="h3">Generate a Random Quote </Typography>
+                    <Typography variant="h4">Generate a Random Quote </Typography>
 
-                    <Typography variant="h5">{randomData.content}</Typography>
+                    <Typography variant="h6">{randomData.content}</Typography>
 
                     <Button onClick={fetchData} variant="contained">Button</Button>
 
@@ -47,13 +47,19 @@ export default function Python() {
 
 
             <Box container spacing={2} align="center">
+
                 <Stack spacing={1} sx={{ width: '60%' }}>
                     <Card style={{marginTop:"80px"}}>
 
-                    <Typography>List of Random Quote </Typography>
+                    <Typography variant="h4" style={{marginTop:"20px"}}>List of Random Quote </Typography>
+
                     {storeData.map((item) => (
-                        <Typography variant="h6">{item}</Typography>
+                        <> 
+                           <Typography variant="h6">{item}</Typography>
+                           <Button variant="contained">Delete</Button>
+                        </>
                     ))}
+
 
                     </Card>
 
