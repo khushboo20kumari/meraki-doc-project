@@ -10,7 +10,7 @@ import Dashboard from "./Dashboard";
 import Scratch from "./Scratch";
 import Sreach from "./Sreach"
 import About from "./About";
-import GetInvolved from "./GetInvolved";
+// import GetInvolved from "./GetInvolved";
 import OurStory from "./OurStory";
 import MerakiTeam from "./MerakiTeam";
 import Python from "./Python";
@@ -54,7 +54,7 @@ function App() {
                 </Routes>
 
             </BrowserRouter>
-               <GetInvolved/>
+               {/* <GetInvolved/> */}
         </div>
     )
 }
