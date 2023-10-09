@@ -1,10 +1,10 @@
-
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Stack, Card, Box } from "@mui/material";
 import { useState } from "react";
+
 export default function Python() {
 
     const [randomData, setRandomData] = useState([])
-    const [storeData,setStoreData]=useState([])
+    const [storeData, setStoreData] = useState([])
 
 
     const fetchData = () => {
@@ -13,28 +13,54 @@ export default function Python() {
             .then(response => response.json())
 
             .then(movieData => {
+
                 setRandomData(movieData)
-                setStoreData([...storeData,randomData.content])
-                
+                setStoreData([...storeData, randomData.content])
+
             })
 
             .catch(error => {
                 console.error('Error fetching data:', error)
             });
     };
-    console.log(storeData,"rondom")
+    console.log(storeData, "rondom")
 
     return (
         <>
 
-            <Typography>Random Quete</Typography>
 
-            <Typography>{randomData.content}</Typography>       
+            <Box container spacing={2} align="center">
 
-            <Button onClick={fetchData}>Button</Button>
-            {storeData.map((item)=>(
-               <Typography>{item}</Typography>
-            ))}
+                <Stack spacing={1} sx={{ width: '40%' }}>
+
+                    <Typography variant="h3">Generate a Random Quote </Typography>
+
+                    <Typography variant="h5">{randomData.content}</Typography>
+
+                    <Button onClick={fetchData} variant="contained">Button</Button>
+
+
+
+                </Stack>
+
+            </Box>
+
+
+            <Box container spacing={2} align="center">
+                <Stack spacing={1} sx={{ width: '60%' }}>
+                    <Card style={{marginTop:"80px"}}>
+
+                    <Typography>List of Random Quote </Typography>
+                    {storeData.map((item) => (
+                        <Typography variant="h6">{item}</Typography>
+                    ))}
+
+                    </Card>
+
+
+                </Stack>
+
+            </Box>
 
         </>
     );
