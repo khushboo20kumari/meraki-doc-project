@@ -27,11 +27,14 @@ export default function Python() {
     const HanldeDelete = (index) => {
 
         const list = [...storeData];
-        list.splice(index, 1);
+        // console.log(list,"list")
+        const a=list.splice(index, 1);
+        console.log(a,"list")
         setStoreData(list);
 
     }
-    console.log(storeData, "rondom")
+
+    // console.log(storeData, "rondom")
 
     return (
         <>
