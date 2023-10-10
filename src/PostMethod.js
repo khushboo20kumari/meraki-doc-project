@@ -43,14 +43,6 @@ function PostMethod() {
 
     }
 
-    // const HandlerUpdate = () => {
-    //     axios.put("https://jsonplaceholder.typicode.com/todos", data1)
-    //         .then(res => {
-    //             console.log(res, "data")
-    //         })
-    // }
-
-
     return (
         <>
 

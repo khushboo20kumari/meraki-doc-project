@@ -38,8 +38,8 @@ function PhoneBook() {
 
     }
 
-    // console.log(data, "data")
-    let data1=data.sort((a, b) => (b.name > a.name ? 1 : -1))
+    
+    let data1=data.sort((a, b) => (b.lastName > a.lastName ? 1 : -1))
 
 
     return (

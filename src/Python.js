@@ -28,8 +28,8 @@ export default function Python() {
 
         const list = [...storeData];
         // console.log(list,"list")
-        const a=list.splice(index, 1);
-        console.log(a,"list")
+        list.splice(index, 1);
+        // console.log(a,"list")
         setStoreData(list);
 
     }

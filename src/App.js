@@ -20,6 +20,7 @@ import PostMethod from "./PostMethod";
 
 // import Main from "./PhoneBook/Main";
 import PhoneBook from "./PhoneBook"
+import Product from "./E-commerce/Product";
 
 function App() {
     return (
@@ -56,7 +57,7 @@ function App() {
 
                         <Route path="phonebook" element={<PhoneBook/>}></Route>
 
-
+                        <Route path="ecommerce" element={<Product/>}></Route>
                         
                         
                     </Route>
