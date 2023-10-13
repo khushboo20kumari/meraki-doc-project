@@ -1,31 +1,20 @@
-import { Button, Typography } from "@mui/material";
-import { useState } from "react";
-
-function AddCard({ item }) {
-
-    // const price=item;
+import { Button,Typography} from "@mui/material";
+function AddCard({item,HandlerIncrement,HandlerDecrement,count}){
+    // console.log(ele,"element")
 
 
-    // const [priceItem, setPriceItem] = useState(price)
 
-    const [count, setCount] = useState(0)
-
-    const HandlerIncrement = () => {
-        // setPriceItem(priceItem+1)
-        setCount(count + 1)
-    }
-
-    const HandlerDecrement = () => {
-        // setPriceItem(priceItem - 1)
-        setCount(count - 1)
-    }
-    return (
+    
+    
+    return(
         <>
-            {/* <Typography>{priceItem}</Typography> */}
 
-            <Button variant="contained" onClick={HandlerIncrement}>+</Button>
-            <Typography>{count}</Typography>
-            <Button variant="contained" onClick={HandlerDecrement}>-</Button>
+        <Button onClick={()=>HandlerIncrement(item.price)} variant="contained">increment</Button>
+        <Typography>{count}</Typography>
+        <Button variant="contained" onClcik={HandlerDecrement}>decrement</Button>
+
+        
+          
         </>
     )
 }
