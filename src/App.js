@@ -21,7 +21,7 @@ import PostMethod from "./PostMethod";
 // import Main from "./PhoneBook/Main";
 import PhoneBook from "./PhoneBook"
 import Product from "./E-commerce/Product";
-
+import MainPage from "./Login-Signup-Page/MainPage";
 function App() {
     return (
 
@@ -58,6 +58,8 @@ function App() {
                         <Route path="phonebook" element={<PhoneBook/>}></Route>
 
                         <Route path="ecommerce" element={<Product/>}></Route>
+
+                        <Route path="loginsignup" element={<MainPage/>}></Route>
                         
                         
                     </Route>

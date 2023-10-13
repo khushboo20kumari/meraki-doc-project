@@ -131,7 +131,7 @@ function Product() {
     }, []);
 
 
-    // console.log(data, "khushbooo")
+
     const HandlerIncrement = (item) => {
         setEle([...ele, item])
         setCount(count+1)
