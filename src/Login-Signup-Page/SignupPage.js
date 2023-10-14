@@ -33,6 +33,7 @@ function SignupPage({login}) {
     const [gender, setGender] = useState('')
 
     const [obje, setObje] = useState([])
+    const [successful,setSuccessful]=useState(false)
 
 
     const HandlerUseName = (e) => {
@@ -129,11 +130,14 @@ function SignupPage({login}) {
         setHobbise('')
 
         setObje([...obje, inforData])
+        if (true){
+            setSuccessful(true)
+        }
         
     }
     
     console.log(obje,"obje")
-
+    console.log(login,"lina")
 
     return (
         <>
@@ -169,6 +173,8 @@ function SignupPage({login}) {
                 {genderError ? <Typography>gender should be mele or female</Typography> : " "}
 
                 <Button onClick={HandleSave} variant="contained">Save</Button><br></br>
+                {successful ? <Typography>Signup is successful </Typography> : " "}
+
 
                 </Card>
 
