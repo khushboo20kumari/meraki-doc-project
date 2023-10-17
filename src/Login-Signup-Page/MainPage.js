@@ -27,12 +27,15 @@ function MainPage() {
     }
 
     const HandlerLogin = () => {
-        setLogin([...login, { userName, password }])
+        setLogin([...login,{userName,password}])
+        console.log(login,"puja")
         setUserName('')
         setPassword('')
-
-
     }
+    // console.log(login,"kkkkk")
+    // console.log(login,"lllll")
+    // console.log(login,"kkkk")
+    // console.log(login,"kkkkk")
 
     return (
         <>

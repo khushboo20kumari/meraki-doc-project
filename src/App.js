@@ -4,8 +4,9 @@ import './App.css';
 import Navbar from "./Navbar"
 import Home from "./Home";
 
+import MovieRow from "./MovieSreach/MovieRow"
 import Learn from "./Learn";
-import Dashboard from "./Dashboard";
+// import Dashboard from "./Dashboard";
 
 import Scratch from "./Scratch";
 import Sreach from "./Sreach"
@@ -22,6 +23,7 @@ import PostMethod from "./PostMethod";
 import PhoneBook from "./PhoneBook"
 import Product from "./E-commerce/Product";
 import MainPage from "./Login-Signup-Page/MainPage";
+
 function App() {
     return (
 
@@ -33,13 +35,18 @@ function App() {
 
                     <Route path="/" element={<Navbar />}>
 
+                        <Route path="movie" element={<MovieRow/>}></Route>
+                        
+
                         <Route path="home" element={<Home />} />
 
                         <Route path="learn" element={<Learn />}/>
 
+                        <Route path="movie" element={<MovieRow/>}></Route>
+
                         <Route path="about" element={<About/>} />
 
-                        <Route path="dashboard" element={<Dashboard/>}/>
+                        {/* <Route path="dashboard" element={<Dashboard/>}/> */}
 
                         <Route path="scratch" element={<Scratch/>}/>
 

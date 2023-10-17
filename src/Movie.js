@@ -1,12 +1,14 @@
 
-
 import { useEffect, useState } from "react";
 
 import { Grid, Typography, TextField, Button, Box } from "@mui/material"
 
 import Paper from '@mui/material/Paper';
+import { useRef } from "react";
 
-function MerakiTeam() {
+function Movie() {
+
+  const useRefitem=useRef('')
 
   const [data, setData] = useState([])
 
@@ -15,6 +17,9 @@ function MerakiTeam() {
   const fetchData = () => {
 
     setSreach("")
+    
+    // useRefitem.current.focus()
+    
 
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=8318c431b4fc8a2c4762bf2a52c351ee&query=${sreach}`)
 
@@ -25,11 +30,13 @@ function MerakiTeam() {
         setData(movieData.results)
         // console.log(movieData, "data");
       })
+      // useRefitem.current.focus()
 
       .catch(error => {
         console.error('Error fetching data:', error)
       });
   };
+  
 
   useEffect(() => {
     fetchData();
@@ -71,6 +78,6 @@ function MerakiTeam() {
     </>
   )
 }
-export default MerakiTeam;
+export default Movie;
 
 
