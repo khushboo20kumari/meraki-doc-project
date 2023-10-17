@@ -7,19 +7,17 @@ function MerakiTeam() {
 
                 <Typography variant="h3">
 
-                    Meet the team of core members, a ton of volunteers, and past members that have made it all possible.
+                    you can sreach Any MOvise with title
 
                 </Typography>
 
-                <Typography variant="body1" gutterBottom spacing={6} style={{ letterSpacing: '2px', fontSize: "20px" ,marginTop:"50px"}}>
-                    Meraki aims to remain free for underserved communities in India. We have been fortunate to find passionate people sharing our goals and helping us build one of the best learning platforms out there.
-
-                    undraw Agreement
+                <Typography variant="body1" gutterBottom spacing={6} style={{ letterSpacing: '2px', fontSize: "20px", marginTop: "50px" }}>
+                    It can be an interesting experience looking around at websites in particular industries to identify trends and see how they differ from those in other industries. In this article, we’ll take a look at the websites of major motion pictures to see what types of websites are being created. Movies are a big part of the entertainment industry, and in recent years their websites have become increasingly critical to their overall success.
 
                 </Typography>
 
             </Box>
-             <MerakiTeamApi/>
+            <MerakiTeamApi />
 
         </>
     )

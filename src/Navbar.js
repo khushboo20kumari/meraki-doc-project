@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Button, Stack, Select, MenuItem, Typography } from "@mui/material";
+import { AppBar, Toolbar, Button, Stack, Select, MenuItem, Typography ,Box} from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -22,10 +22,10 @@ const Navbar = () => {
 
               <MenuItem value="" >learn</MenuItem>
 
-              <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography><Link to="/python">Introduction to Python</Link></Typography></MenuItem>
-              <MenuItem value={2}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/typing_c44af896be.svg"></img><Typography><Link to="/phonebook">Residential Programmes</Link></Typography></MenuItem>
-              <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/language_7ca6001f6b.svg"></img><Typography><Link to="/ecommerce">Spoken English</Link></Typography></MenuItem>
-              <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/residential_22d04ce534.svg"></img><Typography><Link to="/loginsignup">Introduction to Scratch</Link></Typography></MenuItem>
+              <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography><Link to="/Randomquote">Random Quotes</Link></Typography></MenuItem>
+              <MenuItem value={2}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/typing_c44af896be.svg"></img><Typography><Link to="/phonebook">Phonebook App</Link></Typography></MenuItem>
+              <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/language_7ca6001f6b.svg"></img><Typography><Link to="/ecommerce">E-commerce</Link></Typography></MenuItem>
+              <MenuItem value={3}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/residential_22d04ce534.svg"></img><Typography><Link to="/loginsignup">Login Signup</Link></Typography></MenuItem>
               <MenuItem value={4}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/scratch_093b5e17bb.svg"></img><Typography>MCDigital Course-1</Typography></MenuItem>
               <MenuItem value={1}> <img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/python_38800db42e.svg"></img><Typography>Introduction to Python</Typography></MenuItem>
               <MenuItem value={2}><img src="https://s3strapi-project.s3.ap-south-1.amazonaws.com/typing_c44af896be.svg"></img><Typography>Residential Programmes</Typography></MenuItem>
@@ -42,7 +42,7 @@ const Navbar = () => {
               <MenuItem value="">About</MenuItem>
               <MenuItem value={1}><Link to="/ourstory">Our Story</Link></MenuItem>
 
-              <MenuItem value={2}><Link to="/merakiteam">Meraki Team</Link></MenuItem>
+              <MenuItem value={2}><Link to="/merakiteam">Movie-Sreach App</Link></MenuItem>
 
             </Select>
 
@@ -68,19 +68,8 @@ const Navbar = () => {
 
             </Link>
 
-            {/* <Link to="/scratch">
-            <Button variant="contained" color="success">
-              Scratch
-            </Button>
-          </Link> */}
+  
 
-            {/* <Link to="/search">
-            <Button>
-
-            <TextField id="standard-basic" label="Standard" variant="standard"/>
-
-            </Button>
-          </Link> */}
           </Stack>
 
         </Toolbar>
@@ -88,6 +77,11 @@ const Navbar = () => {
       </AppBar>
 
       <Outlet />
+
+      <Box style={{width:"100%",height:"300px"}} className="bg">
+        <Typography>Created by khushboo kumari</Typography>
+      </Box>
+      
     </>
   );
 };
