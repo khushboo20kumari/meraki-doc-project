@@ -3,7 +3,7 @@ import './App.css';
 
 import Navbar from "./Navbar"
 import Home from "./Home";
-
+import RondomQuoteRow from "./RandomQuote/RandomQuoteRow";
 import MovieRow from "./MovieSreach/MovieRow"
 import Learn from "./Learn";
 // import Dashboard from "./Dashboard";
@@ -13,8 +13,8 @@ import Sreach from "./Sreach"
 import About from "./About";
 
 import OurStory from "./OurStory";
-import MerakiTeam from "./MerakiTeam";
-import Python from "./Python";
+// import MerakiTeam from "./MerakiTeam";
+// import Python from "./Python";
 
 import OurPartners from "./OurPartners"
 import PostMethod from "./PostMethod";
@@ -37,7 +37,9 @@ function App() {
 
                         <Route path="movie" element={<MovieRow/>}></Route>
                         
+                          
 
+                          <Route path="randomquote" element={<RondomQuoteRow/>}/>
                         <Route path="home" element={<Home />} />
 
                         <Route path="learn" element={<Learn />}/>
@@ -54,9 +56,9 @@ function App() {
 
                         <Route path="ourstory" element={<OurStory/>}/>
                         
-                        <Route path="merakiteam" element={<MerakiTeam/>}></Route>
+                        {/* <Route path="merakiteam" element={<MerakiTeam/>}></Route> */}
                         
-                        <Route path="python" element={<Python/>}></Route>
+                        {/* <Route path="python" element={<Python/>}></Route> */}
 
                         <Route path="ourPartners" element={<OurPartners/>}/>
                         
