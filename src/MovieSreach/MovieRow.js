@@ -16,7 +16,6 @@ function MovieRow() {
 
     const [sreach, setSreach] = useState('')
 
-
     const fetchData = () => {
 
         setSreach("")

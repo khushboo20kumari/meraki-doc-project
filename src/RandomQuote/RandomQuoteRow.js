@@ -1,4 +1,4 @@
-import { Button, Typography, Stack, Card, Box } from "@mui/material";
+import { Button, Typography, Stack, Box } from "@mui/material";
 import { useState } from "react";
 
 import ListQuote from "./ListQuote"

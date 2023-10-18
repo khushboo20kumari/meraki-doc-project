@@ -17,8 +17,6 @@ const OurPartners = () => {
             });
     }, []);
 
-    // console.log(partner, "data")
-
     return (
         <>
             <Box sx={{ width: '100%', maxWidth: 800, mx: 'auto', marginTop: "30px" }} >
@@ -41,12 +39,10 @@ const OurPartners = () => {
                     <Grid item xs={3} sm={6} md={3} lg={3} key={item.id}>
                         <Paper >
                             <Stack key={index}>
-                                {/* <img src={partner[item].Url} /> */}
                                 <Typography>{partner[item].Name}</Typography>
                                 <Typography>{partner[item].OrganisationType}</Typography>
 
-                                {/* <Typography>{partner[item].Description}</Typography> */}
-                                {/* <Typography>{partner[item].}</Typography> */}
+                                <Typography>{partner[item].Description}</Typography>
                             </Stack>
                         </Paper>
                     </Grid>

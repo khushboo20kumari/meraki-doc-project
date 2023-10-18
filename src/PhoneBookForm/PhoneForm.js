@@ -1,7 +1,8 @@
 import { Button, TextField, Box, Card, Typography } from "@mui/material";
 import { useState } from "react";
-
-function PhoneBook() {
+// import Table from "./Table"
+import TableData from "./TableData"
+function PhoneForm() {
 
     const [name, setName] = useState('')
 
@@ -38,8 +39,8 @@ function PhoneBook() {
 
     }
 
-    
-    let data1=data.sort((a, b) => (b.lastName > a.lastName ? 1 : -1))
+
+    let data1 = data.sort((a, b) => (b.lastName > a.lastName ? 1 : -1))
 
 
     return (
@@ -67,33 +68,8 @@ function PhoneBook() {
 
                 </Card>
 
-                <Box style={{ width: "30%", margin: "auto", textAlign: "center",marginTop:"80px"}}>
-                    <table border="1" style={{width:"100%"}}>
-                        <thead>
+                <TableData table={data1}/>
 
-                            <tr>
-                                <th>First name</th>
-                                <th>Last name</th>
-                                <th>Phone</th>
-                            </tr>
-
-                        </thead>
-                        <tbody>
-
-                            {data1.map((item, index) => (
-
-                                <tr key={index}>
-                                    <td>{item.name}</td>
-                                    <td>{item.lastName}</td>
-                                    <td>{item.phone}</td>
-                                </tr>
-                            ))}
-
-                        </tbody>
-
-                    </table>
-                
-                    </Box>
             </Box>
 
 
@@ -104,4 +80,4 @@ function PhoneBook() {
 
     )
 }
-export default PhoneBook;
+export default PhoneForm;

@@ -1,4 +1,4 @@
-import { Typography, Button, Stack, Card, Box } from "@mui/material"
+import { Typography, Stack, Card, Box } from "@mui/material"
 import Delete from "./Delete";
 function ListQuote({ storeData ,setStoreData}) {
 
@@ -27,8 +27,8 @@ function ListQuote({ storeData ,setStoreData}) {
                             <>
                                 <Typography variant="h6">{item}</Typography>
 
-                                <Delete/>
-                                <Button variant="contained" style={{ marginLeft: "800px" }} onClick={HanldeDelete}>Delete</Button>
+                                <Delete HanldeDelete={HanldeDelete}/>
+
                             </>
                         ))}
 
