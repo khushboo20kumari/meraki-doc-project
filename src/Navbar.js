@@ -61,9 +61,7 @@ const Navbar = () => {
 
       <Outlet />
 
-      <Box style={{ width: "100%", height: "300px" }} className="bg">
-        <Typography>Created by khushboo kumari</Typography>
-      </Box>
+    
 
     </>
   );
